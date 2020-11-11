@@ -1,0 +1,18 @@
+harnessApiVersion: '1.0'
+type: PIPELINE
+description: Deploys to Staging and Production Set to fail IT test on Staging
+pipelineStages:
+- type: ENV_STATE
+  name: SpringBootApp Deploy to Staging-fails
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 1
+  workflowName: SpringBootApp Deploy to Staging-fails
+- type: ENV_STATE
+  name: SpringBootApp Deploy to Production
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
+  workflowName: SpringBootApp Deploy to Production
