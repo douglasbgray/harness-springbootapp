@@ -16,10 +16,3 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 2
   workflowName: SpringBootApp Deploy to Production
-- type: ENV_STATE
-  name: SpringBootApp Canary Deploy
-  parallel: false
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: STAGE 3
-  workflowName: SpringBootApp Canary Deploy
